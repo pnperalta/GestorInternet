@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Internet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pantalla">
+        <h1>Gestione su Internet 😊</h1>
+        <h2>Inicie sesion:</h2>
+        <form>
+            <label for="nombre" class="texto"> Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="contrato" class="texto">Número de contrato:</label>
+            <input type="number" id="contrato" name="contrato">
+        </form>
+        <button onclick="iniciarSesion()">INICIAR SESION</button>
+        <form>
+            <label for="precio" class="texto">Precio nuevo:</label>
+            <input type="number" id="precio" name="precio">
+        </form>
+        <button onclick="cambiarPrecio()">CAMBIAR PRECIO</button>
+        <form>
+            <label for="tipoPlan" class="texto">Nuevo plan:</label>
+            <select id="plan" style="font-size: 100%;">
+                <option value="basico">Básico</option>
+                <option value="estandar">Estandar</option>
+                <option value="premium">Premium</option>
+            </select>
+        </form>
+        <button onclick="cambiarplan()" style="margin-top: 1%;">CAMBIAR PLAN</button>
+        <h3> Calcular el precio por cantidad de meses:</h3>
+        <form>
+            <label for="meses" class="texto"> Cantidad de meses:</label>
+            <input type="number" id="meses" name="meses">
+        </form>
+        <button onclick="calcularPeriodo()"> CALCULAR</button>
+        <h3 id="infoperiodo" style="margin-bottom: 1%;"></h3>
+        <button onclick="mostrarInformacion()" style="margin-top: 2%;"> MOSTRAR INFORMACIÓN</button>
+        <div class="info">
+            <h3 id="infonombre" class="tinfo"></h3>
+            <h3 id="infocontrato" class="tinfo"></h3>
+            <h3 id="infoplan" class="tinfo"></h3>
+            <h3 id="infovelocidad" class="tinfo"></h3>
+            <h3 id="infoprecio" class="tinfo"></h3>
+        </div>
+       
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
